@@ -1,8 +1,8 @@
 # osu-db-parser
 
 [![npm version](https://img.shields.io/npm/v/osu-db-parser)](https://www.npmjs.org/package/osu-db-parser)
-[![install size](https://packagephobia.now.sh/badge?p=osu-db-parser)](https://packagephobia.now.sh/result?p=axios)
-[![npm downloads](https://img.shields.io/npm/dm/osu-db-parser.svg)](http://npm-stat.com/charts.html?package=axios)
+[![install size](https://packagephobia.now.sh/badge?p=osu-db-parser)](https://packagephobia.now.sh/result?p=osu-db-parser)
+[![npm downloads](https://img.shields.io/npm/dm/osu-db-parser.svg)](http://npm-stat.com/charts.html?package=osu-db-parser)
 ![license: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 That package can read files from osu folder called osu!.db and collection.db
@@ -67,5 +67,7 @@ const ultimateDB = new OsuDBParser(osuDBbuffer=osuDBbuffer, osuCollectionBuffer=
 
 let osuDBData = ultimateDB.getOsuDBData();
 let osuCollectionData = ultimateDB.getCollectionData();
+
+```
 
 #### If something wrong, pleas-s-s-s-e create PR with fix)
