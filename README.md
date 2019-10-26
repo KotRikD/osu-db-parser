@@ -6,7 +6,7 @@
 ![license: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 That package can read files from osu folder called osu!.db and collection.db
-About struct that db look at peppy site: [*link*](https://osu.ppy.sh/help/wiki/osu!_File_Formats/Db_%28file_format%29)
+About struct that db look on peppy site: [*link*](https://osu.ppy.sh/help/wiki/osu!_File_Formats/Db_%28file_format%29)
 
 ## Installing
 Using npm:
@@ -21,7 +21,7 @@ const fs = require("fs");
 const OsuDBParser = require("osu-db-parser");
 
 let osuDBbuffer = Buffer.from(fs.readFileSync("<PATH-TO OSU-DB>"));
-const osuDB = new OsuDBParser(osuDBbuffer=osuDBbuffer);
+const osuDB = new OsuDBParser(osuDBbuffer);
 
 let osuDBData = osuDB.getOsuDBData(); // This is osu!.db data you can make with this all that you want.
 ```
@@ -42,7 +42,7 @@ const fs = require("fs");
 const OsuDBParser = require("osu-db-parser");
 
 let collectionBuffer = Buffer.from(fs.readFileSync("<PATH-TO COLLECTION-DB>"));
-const osuDB = new OsuDBParser(osuCollectionBuffer=collectionBuffer);
+const collectionDB = new OsuDBParser(null, collectionBuffer); // Yeah, that's okay
 
 let osuCollectionData = collectionDB.getCollectionData() // This is collection.db data you can make with this all that you want.
 ```

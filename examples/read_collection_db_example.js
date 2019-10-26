@@ -1,8 +1,8 @@
 const fs = require("fs");
-const OsuDBParser = require("../osu-db-parser");
+const OsuDBParser = require("../index.js");
 
 
-const DB_PATH = "../collection.db"
+const DB_PATH = "./collection.db"
 const collectionDB = new OsuDBParser(null, osuCollectionBuffer=Buffer.from(fs.readFileSync(DB_PATH)));
 
 let osuCollectionData = collectionDB.getCollectionData()
