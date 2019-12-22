@@ -86,7 +86,9 @@ class Reader {
             let beatmapscount = data['beatmaps_count'];
             data = [];
             for (let i = 0; i < beatmapscount; i++) {
-                buff.ReadInt32(); // entry size xd
+                if (osuver < 20191107) {
+                  buff.ReadInt32(); // entry size xd
+                }
                 let beatmap = {
                   'artist_name': buff.ReadOsuString(),
                   'artist_name_unicode': buff.ReadOsuString(),
@@ -191,13 +193,13 @@ class Reader {
                   'ignore_skin': buff.ReadBoolean(),
                   'disable_storyboard': buff.ReadBoolean(),
                   'disable_video': buff.ReadBoolean(),
-                  'visual_override': buff.ReadBoolean(),
-                  'last_modification_time_2': buff.ReadInt32()
+                  'visual_override': buff.ReadBoolean()
                 }
 
                 if (osuver < 20140609) {
                   buff.ReadInt16()
                 }
+                beatmap['last_modification_time_2'] = buff.ReadInt32();
 
                 beatmap['mania_scroll_speed'] = buff.ReadByte()
 
