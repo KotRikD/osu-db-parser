@@ -179,6 +179,7 @@ class Reader {
                   'grade_mania': buff.ReadByte(),
                   'local_beatmap_offset': buff.ReadInt16(),
                   'stack_leniency': buff.ReadFloat(),
+                  'timing_points': timingPoints,
                   'mode': buff.ReadByte(),
                   'song_source': buff.ReadOsuString(),
                   'song_tags': buff.ReadOsuString(),

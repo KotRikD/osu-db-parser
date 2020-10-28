@@ -1,6 +1,6 @@
 {
   "name": "osu-db-parser",
-  "version": "1.0.35",
+  "version": "1.0.37",
   "description": "A parser for osu!.db and collections.db",
   "main": "index.js",
   "scripts": {},
