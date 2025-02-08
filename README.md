@@ -18,7 +18,7 @@ $ npm install osu-db-parser
 
 ```js
 const fs = require("fs");
-const OsuDBParser = require("osu-db-parser");
+const { OsuDBParser } = require("osu-db-parser");
 
 let osuDBbuffer = Buffer.from(fs.readFileSync("<PATH-TO OSU-DB>"));
 const osuDB = new OsuDBParser(osuDBbuffer);
@@ -39,7 +39,7 @@ Similar to how to read osu!.db ;D
 
 ```js
 const fs = require("fs");
-const OsuDBParser = require("osu-db-parser");
+const { OsuDBParser } = require("osu-db-parser");
 
 let collectionBuffer = Buffer.from(fs.readFileSync("<PATH-TO COLLECTION-DB>"));
 const collectionDB = new OsuDBParser(null, collectionBuffer); // Yeah, that's okay
@@ -59,7 +59,7 @@ let newData = collectionDB.getCollectionData() ;
 
 ```js
 const fs = require("fs");
-const OsuDBParser = require("osu-db-parser");
+const { OsuDBParser } = require("osu-db-parser");
 
 let osuDBbuffer = Buffer.from(fs.readFileSync("<PATH-TO OSU-DB>"));
 let collectionBuffer = Buffer.from(fs.readFileSync("<PATH-TO COLLECTION-DB>"));
